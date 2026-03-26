@@ -27,10 +27,10 @@
                     </record>
                 </header>
                 <body name="body">
-                    <sequence name="platformData" optional="false">
-                        <variant name="platformSpecifics" optional="false">
+                    <sequence name="PlatformData" optional="false">
+                        <variant name="PlatformSpecifics" optional="false">
                             <vtag_field min_count="0" max_count="1" field_type_unsigned="unsigned byte"/>
-                            <record name="skidsteer" optional="false" interpretation="Skid-steer specific platform specs">
+                            <record name="Skidsteer" optional="false" interpretation="Skid-steer specific platform specs">
                                 <presence_vector field_type_unsigned="unsigned byte"/>
                                 <fixed_field name="TrackSeparation" optional="true" interpretation="Distance between the two tracks" field_type="unsigned short integer" field_units="meter">
                                     <scale_range real_lower_limit="0" real_upper_limit="30" integer_function="round"/>
@@ -55,7 +55,7 @@
                                 </fixed_field>
                             </record>
                         </variant>
-                        <record name="platformInertial" optional="false" interpretation="General platform specs">
+                        <record name="PlatformInertial" optional="false" interpretation="General platform specs">
                             <presence_vector field_type_unsigned="unsigned byte"/>
                             <fixed_field name="MaximumForwardSpeed" optional="true" field_type="unsigned short integer" field_units="meter per second">
                                 <scale_range real_lower_limit="0.0" real_upper_limit="90.0" integer_function="round"/>
@@ -79,7 +79,7 @@
                                 <scale_range real_lower_limit="0.0" real_upper_limit="40.0" integer_function="round"/>
                             </fixed_field>
                         </record>
-                        <record name="platformSpec" optional="false">
+                        <record name="PlatformSpec" optional="false">
                             <presence_vector field_type_unsigned="unsigned short integer"/>
                             <variable_length_string name="MobilityPlatformName" optional="false" interpretation="A human-readable string for the vehicle.">
                                 <count_field min_count="0" max_count="255" field_type_unsigned="unsigned byte"/>
